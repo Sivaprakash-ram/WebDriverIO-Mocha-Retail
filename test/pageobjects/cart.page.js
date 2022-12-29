@@ -17,8 +17,11 @@ class CartPage extends Page {
     }
 
     async getProductPrice() {
-    const productPrice = await $('//span[@data-e2e="product-line-price"]');
-    console.log(await productPrice.getText());
+        let productPrice = await $('//span[@data-e2e="product-line-price"]').getText();
+        console.log(await productPrice);
+        let price = JSON.stringify(await productPrice);
+        let priceSplit = price.split("£");
+        console.log(priceSplit[1]);
     }
 }
 

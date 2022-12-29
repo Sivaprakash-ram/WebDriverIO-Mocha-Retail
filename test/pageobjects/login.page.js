@@ -24,8 +24,8 @@ class LoginPage extends Page {
        return $$('//div[contains(@class, "Footerstyles")]/ul/li/a');
     }
 
-    async footerLinksText ()  {
-      await this.footerLinks.map(async element => {
+    get footerLinksText ()  {
+       this.footerLinks.map(async element => {
             console.log(await element.getText());
         });
     }
