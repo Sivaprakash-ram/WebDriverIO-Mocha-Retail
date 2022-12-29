@@ -8,7 +8,7 @@ describe('My Landing page of the application', () => {
     })
 
     it('Get Footer Links ', async () =>  {
-       await LoginPage.footerLinksText();
+       await LoginPage.footerLinksText;
     })
 
     it('Accept Cookies and Click Account Button', async () => {

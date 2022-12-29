@@ -25,7 +25,7 @@ class LoginPage extends Page {
     }
 
     get footerLinksText ()  {
-       this.footerLinks.map(async element => {
+       return this.footerLinks.map(async element => {
             console.log(await element.getText());
         });
     }
